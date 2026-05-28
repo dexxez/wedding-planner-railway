@@ -46,13 +46,13 @@ function h($s){ return htmlspecialchars($s, ENT_QUOTES,'UTF-8'); }
 ?>
 <!DOCTYPE html><html lang="ru"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Регистрация — WeddingPlan</title>
+<title>Регистрация — Свадебный планировщик</title>
 <link rel="stylesheet" href="<?= app_url('assets/css/style.css') ?>">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
 </head><body>
 <div class="auth-wrap">
 <div class="auth-card" style="max-width:500px">
-  <div class="auth-logo"><div class="ring">💍</div><h1>WeddingPlan</h1><p>Создайте аккаунт и начните планирование</p></div>
+  <div class="auth-logo"><div class="ring">💍</div><h1>Свадебный планировщик</h1><p>Создайте аккаунт и начните планирование</p></div>
   <?php if ($error): ?><div class="alert alert-error">⚠️ <?= h($error) ?></div><?php endif; ?>
   <form method="POST">
     <p style="font-weight:700;margin-bottom:.75rem;font-size:.9rem">👤 Ваши данные</p>

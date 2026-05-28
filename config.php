@@ -35,7 +35,7 @@ define('DB_NAME', env_first(['MYSQLDATABASE', 'MYSQL_DATABASE', 'DB_DATABASE', '
 define('DB_USER', env_first(['MYSQLUSER', 'MYSQL_USER', 'DB_USERNAME', 'DB_USER'], $dbUrl['user'] ?? 'root'));
 define('DB_PASS', env_first(['MYSQLPASSWORD', 'MYSQL_PASSWORD', 'DB_PASSWORD', 'DB_PASS'], $dbUrl['pass'] ?? ''));
 
-define('APP_NAME', env_first(['APP_NAME'], 'WeddingPlan'));
+define('APP_NAME', env_first(['APP_NAME'], 'Свадебный планировщик'));
 define('SESSION_SECRET', env_first(['SESSION_SECRET'], 'change_me_32chars_secret_key_here'));
 
 function app_base_path(): string {

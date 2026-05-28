@@ -12,7 +12,7 @@ function pageHeader(string $title, string $active): void {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{$title} — WeddingPlan</title>
+<title>{$title} — Свадебный планировщик</title>
 <link rel="stylesheet" href="{$styleUrl}">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
 </head>
@@ -31,7 +31,7 @@ HTML;
     ];
     $userName = $user ? htmlspecialchars($user['full_name'], ENT_QUOTES) : '';
     echo '<aside class="sidebar" id="sidebar">';
-    echo '<div class="sidebar-logo"><div class="ring">💍</div><h2>WeddingPlan</h2><small>' . $evTitle . '</small></div>';
+    echo '<div class="sidebar-logo"><div class="ring">💍</div><h2>Свадебный планировщик</h2><small>' . $evTitle . '</small></div>';
     echo '<nav class="sidebar-nav"><div class="nav-section">Меню</div>';
     foreach ($nav as $item) {
         $cls = ($active === $item['key']) ? 'nav-link active' : 'nav-link';

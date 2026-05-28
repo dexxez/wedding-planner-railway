@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html><html lang="ru"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Вход в AdminPanel — WeddingPlan</title>
+<title>Вход в AdminPanel — Свадебный планировщик</title>
 <link rel="stylesheet" href="<?= app_url('assets/css/style.css') ?>">
 <link rel="stylesheet" href="<?= app_url('admin/assets/admin.css') ?>">
 </head><body style="background:linear-gradient(135deg,#2c3e50 0%,#3d5166 100%)">
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <div class="auth-logo">
     <div class="ring">🔧</div>
     <h1 style="color:#4a6fa5">Admin Panel</h1>
-    <p>WeddingPlan — панель управления</p>
+    <p>Свадебный планировщик — панель управления</p>
   </div>
   <?php if ($error): ?>
   <div class="alert alert-error">⚠️ <?= h($error) ?></div>

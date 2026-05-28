@@ -28,7 +28,7 @@ function adminPageHeader(string $title, string $active): void {
     echo '<div class="sidebar-logo">';
     echo '<div class="ring">🔧</div>';
     echo '<h2 style="color:var(--admin-accent)">Admin Panel</h2>';
-    echo '<small>WeddingPlan</small>';
+    echo '<small>Свадебный планировщик</small>';
     echo '</div>';
     echo '<nav class="sidebar-nav"><div class="nav-section">Управление</div>';
     foreach ($nav as $item) {

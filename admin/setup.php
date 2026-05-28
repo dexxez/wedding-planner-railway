@@ -83,7 +83,7 @@ $users = $pdo->query("SELECT id, username, email, full_name, is_admin, created_a
 ?>
 <!DOCTYPE html><html lang="ru"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Настройка администратора — WeddingPlan</title>
+<title>Настройка администратора — Свадебный планировщик</title>
 <link rel="stylesheet" href="<?= app_url('assets/css/style.css') ?>">
 <link rel="stylesheet" href="<?= app_url('admin/assets/admin.css') ?>">
 </head><body style="background:linear-gradient(135deg,#2c3e50,#3d5166);padding:2rem">
