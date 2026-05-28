@@ -16,6 +16,7 @@ function ownVendor(PDO $pdo, int $id, int $eid): bool {
 function valid(string $v, array $a): bool { return in_array($v,$a,true); }
 
 $cats    = ['photo','video','florist','catering','music','decor','transport','beauty','venue','other'];
+$catRu = ['venue'=>'Площадка','catering'=>'Кейтеринг','decor'=>'Декор','photo'=>'Фото/Видео','music'=>'Музыка','documents'=>'Документы','transport'=>'Транспорт','beauty'=>'Красота','honeymoon'=>'Медовый месяц','other'=>'Прочее'];
 $statuses= ['considering','booked','deposit_paid','fully_paid','cancelled'];
 
 if ($action === 'create') {

@@ -16,6 +16,7 @@ function ownTask(PDO $pdo, int $id, int $eid): bool {
 function valid(string $v, array $a): bool { return in_array($v, $a, true); }
 
 $cats  = ['venue','catering','decor','photo','music','documents','transport','beauty','honeymoon','other'];
+$catRu = ['venue'=>'Площадка','catering'=>'Кейтеринг','decor'=>'Декор','photo'=>'Фото/Видео','music'=>'Музыка','documents'=>'Документы','transport'=>'Транспорт','beauty'=>'Красота','honeymoon'=>'Медовый месяц','other'=>'Прочее'];
 $pris  = ['low','medium','high'];
 $stats = ['not_started','in_progress','done'];
 
