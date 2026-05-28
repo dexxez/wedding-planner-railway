@@ -5,6 +5,27 @@ require_once 'includes/auth.php';
 require_once 'includes/layout.php';
 session_start();
 requireAuth();
+$catRu = [
+    'venue' => 'Площадка',
+    'catering' => 'Кейтеринг',
+    'decor' => 'Декор',
+    'photo' => 'Фотограф',
+    'video' => 'Видеограф',
+    'music' => 'Музыка',
+    'documents' => 'Документы',
+    'transport' => 'Транспорт',
+    'beauty' => 'Красота',
+    'honeymoon' => 'Медовый месяц',
+    'florist' => 'Флористика',
+    'flowers' => 'Цветы',
+    'rings' => 'Кольца',
+    'dress' => 'Платье',
+    'guests' => 'Гости',
+    'family' => 'Семья',
+    'friends' => 'Друзья',
+    'colleagues' => 'Коллеги',
+    'other' => 'Другое'
+];
 
 $pdo   = getDb();
 $event = currentEvent();
@@ -104,7 +125,7 @@ pageHeader('Главная', 'dashboard');
         $overdue = $d !== null && $d < 0;
     ?>
     <tr <?= $overdue?'class="overdue"':'' ?>>
-      <td><?= h($t['title']) ?><br><small class="text-muted"><?= h($t['category']) ?></small></td>
+      <td><?= h($t['title']) ?><br><small class="text-muted"><?= $catRu[$t['category']] ?? h($t['category']) ?></small></td>
       <td style="white-space:nowrap">
         <?= date('d.m', strtotime($t['due_date'])) ?>
         <?php if ($d !== null): ?><br><small class="<?= $overdue?'text-red':($d<=3?'text-rose':'text-muted') ?>"><?= $overdue?'просрочено':($d===0?'сегодня':$d.'д.') ?></small><?php endif; ?>
@@ -130,7 +151,7 @@ pageHeader('Главная', 'dashboard');
     <table><thead><tr><th>Категория</th><th>Планово</th><th>Факт</th></tr></thead><tbody>
     <?php foreach ($catRows as $c): ?>
     <tr>
-      <td><?= h($c['category']) ?></td>
+      <td><?= $catRu[$c['category']] ?? h($c['category']) ?></td>
       <td><?= money((float)$c['p']) ?></td>
       <td class="<?= (float)$c['a']>(float)$c['p']?'text-red':'text-green' ?>"><?= money((float)$c['a']) ?></td>
     </tr>
